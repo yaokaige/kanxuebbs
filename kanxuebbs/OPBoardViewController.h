@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OPBoardViewController : UIViewController
+@interface OPBoardViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) NSArray *boardData;
+@property (strong, nonatomic) IBOutlet UITableView *boardTable;
 
 - (IBAction)refreshAction:(id)sender;
 
