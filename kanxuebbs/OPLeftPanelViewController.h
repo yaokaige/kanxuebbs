@@ -1,5 +1,5 @@
 //
-//  OPViewController.h
+//  OPLeftPanelViewController.h
 //  kanxuebbs
 //
 //  Created by sgl on 13-6-24.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JASidePanelController.h"
 
-@interface OPViewController : JASidePanelController
+@interface OPLeftPanelViewController : UITableViewController
 
 @end

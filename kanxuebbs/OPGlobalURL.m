@@ -21,8 +21,8 @@
 - (void)defaultURLS
 {
     self.urls = @{kOPSecurityToken : @"http://bbs.pediy.com/getsecuritytoken.php?styleid=12",
-                  kOPUserLogin     : @"http://bbs.pediy.com/login.php??do=login&styleid=12",
-                  kOPUserLogout    : @"http://bbs.pediy.com/login.php??do=logout&logouthash=%@&styleid=12",
+                  kOPUserLogin     : @"http://bbs.pediy.com/login.php?do=login&styleid=12",
+                  kOPUserLogout    : @"http://bbs.pediy.com/login.php?do=logout&logouthash=%@&styleid=12",
                   kOPUserInfo      : @"http://bbs.pediy.com/member.php?u=%@&styleid=12",
                   kOPBoardList     : @"http://bbs.pediy.com/index.php?styleid=12",
                   kOPThreadList    : @"http://bbs.pediy.com/forumdisplay.php?f=%d?styleid=12",
@@ -31,7 +31,7 @@
                   kOPNewReply      : @"http://bbs.pediy.com/newreply.php?styleid=12",
                   kOPBoardStatus   : @"http://bbs.pediy.com/forumdisplay.php?f=%d&getnewpost=%d&styleid=12",
                   kOPThreadStatus  : @"http://bbs.pediy.com/showthread.php?t=%d&styleid=12&getnewpost=%d",
-                  kOPUserAvstar    : @"http://bbs.pediy.com/image.php?u=%@",
+                  kOPUserAvatar    : @"http://bbs.pediy.com/image.php?u=%@",
                   kOPAttachment    : @"http://bbs.pediy.com/attachment.php?attachmentid=%@&thumb=1&styleid=12",
                   kOPPostDetail    : @"http://bbs.pediy.com/showpost.php?styleid=12&p=%@"
                   };

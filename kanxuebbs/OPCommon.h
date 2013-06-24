@@ -8,6 +8,8 @@
 #ifndef OPCommon_h
 #define OPCommon_h
 
+#define OPErrorDomain   @"com.sunix.app"
+
 #ifdef DEBUG
     #define OPLog(xx, ...)          NSLog(@"(%s)(line=%d): " xx, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
     #define OPLogMethodName()       NSLog(@"(%s)(line=%d): ", __PRETTY_FUNCTION__, __LINE__)

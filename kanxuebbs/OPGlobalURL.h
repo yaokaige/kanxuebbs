@@ -19,7 +19,7 @@
 #define kOPNewReply             @"OPNewReply"
 #define kOPBoardStatus          @"OPBoardStatus"
 #define kOPThreadStatus         @"OPThreadStatus"
-#define kOPUserAvstar           @"OPUserAvstar"
+#define kOPUserAvatar           @"OPUserAvatar"
 #define kOPAttachment           @"OPAttachment"
 #define kOPPostDetail           @"OPPostDetail" 
 

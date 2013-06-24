@@ -72,6 +72,11 @@
 		27DB8974177808E3007BC809 /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DB8972177808E3007BC809 /* NSDictionary+Safe.m */; };
 		27DB89791778095F007BC809 /* UIViewController+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DB89781778095F007BC809 /* UIViewController+Network.m */; };
 		27DB897D177809E7007BC809 /* OPGlobalURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DB897C177809E7007BC809 /* OPGlobalURL.m */; };
+		27DB898317781156007BC809 /* OPLeftPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DB898217781156007BC809 /* OPLeftPanelViewController.m */; };
+		27DB8986177811D5007BC809 /* OPBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DB8985177811D5007BC809 /* OPBoardViewController.m */; };
+		27DB898917781606007BC809 /* OPUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DB898817781606007BC809 /* OPUserManager.m */; };
+		27DB898C1778197B007BC809 /* OPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DB898B1778197B007BC809 /* OPLoginViewController.m */; };
+		27DB898F17781C3A007BC809 /* OPBBSInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DB898E17781C3A007BC809 /* OPBBSInterface.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,6 +209,16 @@
 		27DB89781778095F007BC809 /* UIViewController+Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Network.m"; sourceTree = "<group>"; };
 		27DB897B177809E7007BC809 /* OPGlobalURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPGlobalURL.h; sourceTree = "<group>"; };
 		27DB897C177809E7007BC809 /* OPGlobalURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPGlobalURL.m; sourceTree = "<group>"; };
+		27DB898117781156007BC809 /* OPLeftPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPLeftPanelViewController.h; sourceTree = "<group>"; };
+		27DB898217781156007BC809 /* OPLeftPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPLeftPanelViewController.m; sourceTree = "<group>"; };
+		27DB8984177811D5007BC809 /* OPBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPBoardViewController.h; sourceTree = "<group>"; };
+		27DB8985177811D5007BC809 /* OPBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPBoardViewController.m; sourceTree = "<group>"; };
+		27DB898717781605007BC809 /* OPUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPUserManager.h; sourceTree = "<group>"; };
+		27DB898817781606007BC809 /* OPUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPUserManager.m; sourceTree = "<group>"; };
+		27DB898A1778197A007BC809 /* OPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPLoginViewController.h; sourceTree = "<group>"; };
+		27DB898B1778197B007BC809 /* OPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPLoginViewController.m; sourceTree = "<group>"; };
+		27DB898D17781C3A007BC809 /* OPBBSInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPBBSInterface.h; sourceTree = "<group>"; };
+		27DB898E17781C3A007BC809 /* OPBBSInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPBBSInterface.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -502,6 +517,12 @@
 		27DB897617780949007BC809 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				27DB898117781156007BC809 /* OPLeftPanelViewController.h */,
+				27DB898217781156007BC809 /* OPLeftPanelViewController.m */,
+				27DB8984177811D5007BC809 /* OPBoardViewController.h */,
+				27DB8985177811D5007BC809 /* OPBoardViewController.m */,
+				27DB898A1778197A007BC809 /* OPLoginViewController.h */,
+				27DB898B1778197B007BC809 /* OPLoginViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -511,6 +532,10 @@
 			children = (
 				27DB897B177809E7007BC809 /* OPGlobalURL.h */,
 				27DB897C177809E7007BC809 /* OPGlobalURL.m */,
+				27DB898717781605007BC809 /* OPUserManager.h */,
+				27DB898817781606007BC809 /* OPUserManager.m */,
+				27DB898D17781C3A007BC809 /* OPBBSInterface.h */,
+				27DB898E17781C3A007BC809 /* OPBBSInterface.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -673,6 +698,11 @@
 				27DB8974177808E3007BC809 /* NSDictionary+Safe.m in Sources */,
 				27DB89791778095F007BC809 /* UIViewController+Network.m in Sources */,
 				27DB897D177809E7007BC809 /* OPGlobalURL.m in Sources */,
+				27DB898317781156007BC809 /* OPLeftPanelViewController.m in Sources */,
+				27DB8986177811D5007BC809 /* OPBoardViewController.m in Sources */,
+				27DB898917781606007BC809 /* OPUserManager.m in Sources */,
+				27DB898C1778197B007BC809 /* OPLoginViewController.m in Sources */,
+				27DB898F17781C3A007BC809 /* OPBBSInterface.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,10 +769,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -768,6 +795,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;

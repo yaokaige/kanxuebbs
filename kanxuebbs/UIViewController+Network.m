@@ -43,14 +43,14 @@
     [self loadData:jsonSource tag:tag parser:^id(id data, NSError *__autoreleasing *err) {
         id result = [data objectForKey:@"result"];
         if (result == nil) {
-            NSError *e = [NSError errorWithDomain:@"com.sunix.rating" code:-1 userInfo:@{NSLocalizedDescriptionKey: @"Data format error.", NSLocalizedFailureReasonErrorKey: @"No result in data."}];
+            NSError *e = [NSError errorWithDomain:OPErrorDomain code:-1 userInfo:@{NSLocalizedDescriptionKey: @"Data format error.", NSLocalizedFailureReasonErrorKey: @"No result in data."}];
             *err = e;
             return nil;
         }
         
         id status = [result objectForKey:@"status"];
         if (status == nil || ![status isKindOfClass:[NSDictionary class]]) {
-            NSError *e = [NSError errorWithDomain:@"com.sunix.rating" code:-1 userInfo:@{NSLocalizedDescriptionKey: @"Data format error.", NSLocalizedFailureReasonErrorKey: @"No status in result."}];
+            NSError *e = [NSError errorWithDomain:OPErrorDomain code:-1 userInfo:@{NSLocalizedDescriptionKey: @"Data format error.", NSLocalizedFailureReasonErrorKey: @"No status in result."}];
             *err = e;
             return nil;
         }
@@ -61,7 +61,7 @@
             if (msg.length == 0) {
                 msg = @"Unknown Server Error.";
             }
-            NSError *e = [NSError errorWithDomain:@"com.sunix.rating" code:code userInfo:@{NSLocalizedDescriptionKey: msg, NSLocalizedFailureReasonErrorKey: msg}];
+            NSError *e = [NSError errorWithDomain:OPErrorDomain code:code userInfo:@{NSLocalizedDescriptionKey: msg, NSLocalizedFailureReasonErrorKey: msg}];
             *err = e;
             return nil;
         }

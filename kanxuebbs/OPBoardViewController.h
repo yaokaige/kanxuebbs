@@ -1,5 +1,5 @@
 //
-//  OPViewController.h
+//  OPBoardViewController.h
 //  kanxuebbs
 //
 //  Created by sgl on 13-6-24.
@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JASidePanelController.h"
 
-@interface OPViewController : JASidePanelController
+@interface OPBoardViewController : UIViewController
+
+- (IBAction)refreshAction:(id)sender;
 
 @end
