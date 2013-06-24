@@ -77,6 +77,7 @@
 		27DB898917781606007BC809 /* OPUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DB898817781606007BC809 /* OPUserManager.m */; };
 		27DB898C1778197B007BC809 /* OPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DB898B1778197B007BC809 /* OPLoginViewController.m */; };
 		27DB898F17781C3A007BC809 /* OPBBSInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DB898E17781C3A007BC809 /* OPBBSInterface.m */; };
+		FE2FCC371778920800B9995C /* OPThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2FCC361778920800B9995C /* OPThreadViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,6 +220,8 @@
 		27DB898B1778197B007BC809 /* OPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPLoginViewController.m; sourceTree = "<group>"; };
 		27DB898D17781C3A007BC809 /* OPBBSInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPBBSInterface.h; sourceTree = "<group>"; };
 		27DB898E17781C3A007BC809 /* OPBBSInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPBBSInterface.m; sourceTree = "<group>"; };
+		FE2FCC351778920800B9995C /* OPThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPThreadViewController.h; sourceTree = "<group>"; };
+		FE2FCC361778920800B9995C /* OPThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPThreadViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -523,6 +526,8 @@
 				27DB8985177811D5007BC809 /* OPBoardViewController.m */,
 				27DB898A1778197A007BC809 /* OPLoginViewController.h */,
 				27DB898B1778197B007BC809 /* OPLoginViewController.m */,
+				FE2FCC351778920800B9995C /* OPThreadViewController.h */,
+				FE2FCC361778920800B9995C /* OPThreadViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -703,6 +708,7 @@
 				27DB898917781606007BC809 /* OPUserManager.m in Sources */,
 				27DB898C1778197B007BC809 /* OPLoginViewController.m in Sources */,
 				27DB898F17781C3A007BC809 /* OPBBSInterface.m in Sources */,
+				FE2FCC371778920800B9995C /* OPThreadViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -881,6 +887,7 @@
 				27DB88D41777F308007BC809 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27DB88D51777F308007BC809 /* Build configuration list for PBXNativeTarget "kanxuebbsTests" */ = {
 			isa = XCConfigurationList;
@@ -889,6 +896,7 @@
 				27DB88D71777F308007BC809 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

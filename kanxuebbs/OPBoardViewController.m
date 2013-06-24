@@ -114,4 +114,14 @@
     [self setBoardTable:nil];
     [super viewDidUnload];
 }
+
+#pragma mark -
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"OPBoardCell"]) {
+        UITableViewCell *cell = (UITableViewCell *)sender;
+        [segue.destinationViewController setTitle:cell.textLabel.text];
+    }
+}
+
 @end
