@@ -1,5 +1,5 @@
 # 看雪论坛iPhone客户端
-![image](https://api.travis-ci.org/bluebanboom/kanxuebbs.png)
+[![image](https://api.travis-ci.org/bluebanboom/kanxuebbs.png)](https://travis-ci.org/bluebanboom/kanxuebbs)
 
 接口文档：[http://bbs.pediy.com/showthread.php?t=163280](http://bbs.pediy.com/showthread.php?t=163280)
 
