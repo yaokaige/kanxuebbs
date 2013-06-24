@@ -1,0 +1,18 @@
+[submodule "libs/JSONKit"]
+	path = libs/JSONKit
+	url = https://github.com/IgorFedorchuk/JSONKitWithoutXcode4Warnings.git
+[submodule "libs/AFNetworking"]
+	path = libs/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking.git
+[submodule "libs/Reachability"]
+	path = libs/Reachability
+	url = https://github.com/tonymillion/Reachability
+[submodule "libs/SDWebImage"]
+	path = libs/SDWebImage
+	url = https://github.com/rs/SDWebImage.git
+[submodule "libs/InAppSettingsKit"]
+	path = libs/InAppSettingsKit
+	url = https://github.com/futuretap/InAppSettingsKit.git
+[submodule "libs/JASidePanels"]
+	path = libs/JASidePanels
+	url = https://github.com/gotosleep/JASidePanels.git
