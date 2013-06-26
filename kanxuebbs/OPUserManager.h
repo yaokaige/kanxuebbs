@@ -21,8 +21,24 @@
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *userid;
 
+/*! 
+ *  通过判断token是否为空来确认用户是否登录。
+ *
+ *  @return 用户是否登录
+ */
 - (BOOL)isLogin;
+
+/*!
+ *  用户登出，调用kOPUserLogout
+ */
 - (void)logout;
+
+/*!
+ *  用户登录
+ *
+ *	@param 	name 	用户名
+ *  @param 	passwd 	密码
+ */
 - (void)login:(NSString *)name passwd:(NSString *)passwd;
 
 + (id)sharedInstance;

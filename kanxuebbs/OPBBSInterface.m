@@ -78,7 +78,7 @@
     return  output;
 }
 
-+ (void)bbsGetData:(NSString *)url result:(void(^)(id data, NSError *err))resultBlock
++ (void)bbsGetData:(NSString *)url result:(OPResultBlock)resultBlock
 {
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
@@ -99,7 +99,7 @@
     [operation start];
 }
 
-+ (void)bbsPostData:(NSString *)host path:(NSString *)path params:(NSDictionary *)params result:(void(^)(id data, NSError *err))resultBlock
++ (void)bbsPostData:(NSString *)host path:(NSString *)path params:(NSDictionary *)params result:(OPResultBlock)resultBlock
 {
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:host]];
     
@@ -112,7 +112,7 @@
     }];
 }
 
-+ (void)login:(NSString *)name passwd:(NSString *)passwd result:(void(^)(id data, NSError *err))resultBlock
++ (void)login:(NSString *)name passwd:(NSString *)passwd result:(OPResultBlock)resultBlock
 {
     NSURL *loginURL = [NSURL URLWithString:[OPGlobalURL URLForKey:kOPUserLogin]];
     NSString *host = [NSString stringWithFormat:@"http://%@", loginURL.host];
@@ -129,9 +129,22 @@
     [OPBBSInterface bbsPostData:host path:path params:params result:resultBlock];
 }
 
-+ (void)loadBoard:(void(^)(id data, NSError *err))resultBlock
++ (void)getSecurityToken:(OPResultBlock)resultBlock
+{
+    NSString *url = [OPGlobalURL URLForKey:kOPSecurityToken];
+    [OPBBSInterface bbsGetData:url result:resultBlock];
+}
+
++ (void)loadBoard:(OPResultBlock)resultBlock
 {
     NSString *url = [OPGlobalURL URLForKey:kOPBoardList];
+    [OPBBSInterface bbsGetData:url result:resultBlock];
+}
+
++ (void)loadThread:(NSInteger)forumID result:(OPResultBlock)resultBlock
+{
+    NSString *urlFormat = [OPGlobalURL URLForKey:kOPThreadList];
+    NSString *url = [NSString stringWithFormat:urlFormat, forumID];
     [OPBBSInterface bbsGetData:url result:resultBlock];
 }
 

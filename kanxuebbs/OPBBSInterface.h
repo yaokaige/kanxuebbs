@@ -10,12 +10,16 @@
 #import "OPGlobalURL.h"
 #import "AFNetworking.h"
 
+typedef void(^OPResultBlock)(id data, NSError *err);
+
 @interface OPBBSInterface : NSObject
 
-+ (void)bbsGetData:(NSString *)url result:(void(^)(id data, NSError *err))resultBlock;
-+ (void)bbsPostData:(NSString *)host path:(NSString *)path params:(NSDictionary *)params result:(void(^)(id data, NSError *err))resultBlock;
++ (void)bbsGetData:(NSString *)url result:(OPResultBlock)resultBlock;
++ (void)bbsPostData:(NSString *)host path:(NSString *)path params:(NSDictionary *)params result:(OPResultBlock)resultBlock;
 
-+ (void)login:(NSString *)name passwd:(NSString *)passwd result:(void(^)(id data, NSError *err))resultBlock;
-+ (void)loadBoard:(void(^)(id data, NSError *err))resultBlock;
++ (void)login:(NSString *)name passwd:(NSString *)passwd result:(OPResultBlock)resultBlock;
++ (void)getSecurityToken:(OPResultBlock)resultBlock;
++ (void)loadBoard:(OPResultBlock)resultBlock;
++ (void)loadThread:(NSInteger)forumID result:(OPResultBlock)resultBlock;
 
 @end
