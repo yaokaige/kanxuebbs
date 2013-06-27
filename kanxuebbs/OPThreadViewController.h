@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OPThreadViewController : UIViewController
+@interface OPThreadViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, assign) NSInteger forumID;
+@property (nonatomic, strong) NSMutableArray *threadList;
+@property (strong, nonatomic) IBOutlet UITableView *threadTable;
 
 @end

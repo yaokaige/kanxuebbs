@@ -77,6 +77,7 @@
 		27DB898917781606007BC809 /* OPUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DB898817781606007BC809 /* OPUserManager.m */; };
 		27DB898C1778197B007BC809 /* OPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DB898B1778197B007BC809 /* OPLoginViewController.m */; };
 		27DB898F17781C3A007BC809 /* OPBBSInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DB898E17781C3A007BC809 /* OPBBSInterface.m */; };
+		FE078EE8177C96E2009083D7 /* OPThreadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE078EE7177C96E2009083D7 /* OPThreadCell.m */; };
 		FE2FCC371778920800B9995C /* OPThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2FCC361778920800B9995C /* OPThreadViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -220,6 +221,8 @@
 		27DB898B1778197B007BC809 /* OPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPLoginViewController.m; sourceTree = "<group>"; };
 		27DB898D17781C3A007BC809 /* OPBBSInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPBBSInterface.h; sourceTree = "<group>"; };
 		27DB898E17781C3A007BC809 /* OPBBSInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPBBSInterface.m; sourceTree = "<group>"; };
+		FE078EE6177C96E2009083D7 /* OPThreadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPThreadCell.h; sourceTree = "<group>"; };
+		FE078EE7177C96E2009083D7 /* OPThreadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPThreadCell.m; sourceTree = "<group>"; };
 		FE2FCC351778920800B9995C /* OPThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPThreadViewController.h; sourceTree = "<group>"; };
 		FE2FCC361778920800B9995C /* OPThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPThreadViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -528,6 +531,8 @@
 				27DB898B1778197B007BC809 /* OPLoginViewController.m */,
 				FE2FCC351778920800B9995C /* OPThreadViewController.h */,
 				FE2FCC361778920800B9995C /* OPThreadViewController.m */,
+				FE078EE6177C96E2009083D7 /* OPThreadCell.h */,
+				FE078EE7177C96E2009083D7 /* OPThreadCell.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -709,6 +714,7 @@
 				27DB898C1778197B007BC809 /* OPLoginViewController.m in Sources */,
 				27DB898F17781C3A007BC809 /* OPBBSInterface.m in Sources */,
 				FE2FCC371778920800B9995C /* OPThreadViewController.m in Sources */,
+				FE078EE8177C96E2009083D7 /* OPThreadCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "OPBoardViewController.h"
 #import "OPBBSInterface.h"
 #import "JSONKit.h"
+#import "OPThreadViewController.h"
 
 @interface OPBoardViewController ()
 
@@ -119,8 +120,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"OPBoardCell"]) {
-        UITableViewCell *cell = (UITableViewCell *)sender;
-        [segue.destinationViewController setTitle:cell.textLabel.text];
+        NSIndexPath *indexPath = [_boardTable indexPathForSelectedRow];
+        id dict = [_boardData safeObjectAtIndex:indexPath.section];
+        id subBoard = [dict objectForKeyNotNull:@"forumSubTitle"];
+        id subDict = [subBoard safeObjectAtIndex:indexPath.row];
+        [segue.destinationViewController setTitle:[subDict objectForKeyNotNull:@"name"]];
+        [segue.destinationViewController setForumID:[[subDict objectForKeyNotNull:@"id"] intValue]];
     }
 }
 
