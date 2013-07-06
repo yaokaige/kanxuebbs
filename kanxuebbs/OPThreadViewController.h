@@ -10,6 +10,7 @@
 
 @interface OPThreadViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, assign) NSInteger forumID;
+@property (nonatomic, assign) NSInteger page;
 @property (nonatomic, strong) NSMutableArray *threadList;
 @property (strong, nonatomic) IBOutlet UITableView *threadTable;
 

@@ -8,6 +8,7 @@
 
 #import "OPLoginViewController.h"
 #import "OPUserManager.h"
+#import "SIAlertView.h"
 
 #define kOPSuccessAlertTag 1051
 
@@ -30,6 +31,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [_nameField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,8 +65,12 @@
 - (IBAction)loginAction:(id)sender
 {
     if (_nameField.text.length == 0 || _passwdField.text.length == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"请输入完整信息！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-        [alert show];
+        SIAlertView *alertView = [[SIAlertView alloc] initWithTitle:@"错误" andMessage:@"请输入完整信息！"];
+        
+        [alertView addButtonWithTitle:@"确定"
+                                 type:SIAlertViewButtonTypeDefault
+                              handler:nil];
+        [alertView show];
     }
     else {
         [[OPUserManager sharedInstance] setDelegate:self];

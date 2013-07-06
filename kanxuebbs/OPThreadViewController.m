@@ -9,6 +9,7 @@
 #import "OPThreadViewController.h"
 #import "OPBBSInterface.h"
 #import "OPThreadCell.h"
+#import "OPThreadDetailViewController.h"
 
 @interface OPThreadViewController ()
 
@@ -22,6 +23,7 @@
     if (self) {
         // Custom initialization
         _forumID = 0;
+        _page = 1;
     }
     return self;
 }
@@ -33,7 +35,24 @@
     _threadTable.dataSource = self;
     _threadTable.delegate = self;
     
-    [OPBBSInterface loadThread:_forumID result:^(id data, NSError *err) {
+    [self loadData];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidUnload {
+    [self setThreadTable:nil];
+    [super viewDidUnload];
+}
+
+#pragma mark -
+- (void)loadData
+{
+    [OPBBSInterface loadThread:_forumID page:_page result:^(id data, NSError *err) {
         if (err == nil) {
             [self dataReady:data];
         }
@@ -43,12 +62,18 @@
     }];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)loadMore
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    _page += 1;
+    [self loadData];
 }
-     
+
+- (void)refresh
+{
+    _page = 1;
+    [self loadData];
+}
+
 #pragma mark -
 - (void)dataReady:(id)data
 {
@@ -87,8 +112,14 @@
     return cell;
 }
 
-- (void)viewDidUnload {
-    [self setThreadTable:nil];
-    [super viewDidUnload];
+#pragma mark -
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *indexPath = [_threadTable indexPathForSelectedRow];
+    id data = [_threadList safeObjectAtIndex:indexPath.row];
+    if (nil != data) {
+        // TODO: pass data
+    }
 }
+
 @end

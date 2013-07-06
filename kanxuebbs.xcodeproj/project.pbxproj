@@ -79,6 +79,12 @@
 		27DB898F17781C3A007BC809 /* OPBBSInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DB898E17781C3A007BC809 /* OPBBSInterface.m */; };
 		FE078EE8177C96E2009083D7 /* OPThreadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE078EE7177C96E2009083D7 /* OPThreadCell.m */; };
 		FE2FCC371778920800B9995C /* OPThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2FCC361778920800B9995C /* OPThreadViewController.m */; };
+		FEFE8786177DBCD5009B3E45 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FEFE8783177DBCD5009B3E45 /* SVProgressHUD.bundle */; };
+		FEFE8787177DBCD5009B3E45 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFE8785177DBCD5009B3E45 /* SVProgressHUD.m */; };
+		FEFE878A177DBCE5009B3E45 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFE8789177DBCE5009B3E45 /* ODRefreshControl.m */; };
+		FEFE878E177DBD03009B3E45 /* SIAlertView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FEFE878B177DBD03009B3E45 /* SIAlertView.bundle */; };
+		FEFE878F177DBD03009B3E45 /* SIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFE878D177DBD03009B3E45 /* SIAlertView.m */; };
+		FEFE8795177DC1FB009B3E45 /* OPThreadDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFE8794177DC1FB009B3E45 /* OPThreadDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +231,16 @@
 		FE078EE7177C96E2009083D7 /* OPThreadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPThreadCell.m; sourceTree = "<group>"; };
 		FE2FCC351778920800B9995C /* OPThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPThreadViewController.h; sourceTree = "<group>"; };
 		FE2FCC361778920800B9995C /* OPThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPThreadViewController.m; sourceTree = "<group>"; };
+		FEFE8783177DBCD5009B3E45 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = libs/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle; sourceTree = SOURCE_ROOT; };
+		FEFE8784177DBCD5009B3E45 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = libs/SVProgressHUD/SVProgressHUD/SVProgressHUD.h; sourceTree = SOURCE_ROOT; };
+		FEFE8785177DBCD5009B3E45 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = libs/SVProgressHUD/SVProgressHUD/SVProgressHUD.m; sourceTree = SOURCE_ROOT; };
+		FEFE8788177DBCE5009B3E45 /* ODRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ODRefreshControl.h; path = libs/ODRefreshControl/ODRefreshControl/ODRefreshControl.h; sourceTree = SOURCE_ROOT; };
+		FEFE8789177DBCE5009B3E45 /* ODRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ODRefreshControl.m; path = libs/ODRefreshControl/ODRefreshControl/ODRefreshControl.m; sourceTree = SOURCE_ROOT; };
+		FEFE878B177DBD03009B3E45 /* SIAlertView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SIAlertView.bundle; path = libs/SIAlertView/SIAlertView/SIAlertView.bundle; sourceTree = SOURCE_ROOT; };
+		FEFE878C177DBD03009B3E45 /* SIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SIAlertView.h; path = libs/SIAlertView/SIAlertView/SIAlertView.h; sourceTree = SOURCE_ROOT; };
+		FEFE878D177DBD03009B3E45 /* SIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SIAlertView.m; path = libs/SIAlertView/SIAlertView/SIAlertView.m; sourceTree = SOURCE_ROOT; };
+		FEFE8793177DC1FB009B3E45 /* OPThreadDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPThreadDetailViewController.h; sourceTree = "<group>"; };
+		FEFE8794177DC1FB009B3E45 /* OPThreadDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPThreadDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +361,9 @@
 		27DB88D81777F6AC007BC809 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				FEFE877C177DBCA8009B3E45 /* SVProgressHUD */,
+				FEFE877B177DBC8D009B3E45 /* ODRefreshControl */,
+				FEFE877A177DBC72009B3E45 /* SIAlertView */,
 				27DB89321777F898007BC809 /* InAppSettingsKit */,
 				27DB892B1777F86A007BC809 /* JASidePanels */,
 				27DB88DC1777F6EE007BC809 /* Reachability */,
@@ -533,6 +552,8 @@
 				FE2FCC361778920800B9995C /* OPThreadViewController.m */,
 				FE078EE6177C96E2009083D7 /* OPThreadCell.h */,
 				FE078EE7177C96E2009083D7 /* OPThreadCell.m */,
+				FEFE8793177DC1FB009B3E45 /* OPThreadDetailViewController.h */,
+				FEFE8794177DC1FB009B3E45 /* OPThreadDetailViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -548,6 +569,35 @@
 				27DB898E17781C3A007BC809 /* OPBBSInterface.m */,
 			);
 			name = DataModel;
+			sourceTree = "<group>";
+		};
+		FEFE877A177DBC72009B3E45 /* SIAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				FEFE878B177DBD03009B3E45 /* SIAlertView.bundle */,
+				FEFE878C177DBD03009B3E45 /* SIAlertView.h */,
+				FEFE878D177DBD03009B3E45 /* SIAlertView.m */,
+			);
+			name = SIAlertView;
+			sourceTree = "<group>";
+		};
+		FEFE877B177DBC8D009B3E45 /* ODRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				FEFE8788177DBCE5009B3E45 /* ODRefreshControl.h */,
+				FEFE8789177DBCE5009B3E45 /* ODRefreshControl.m */,
+			);
+			name = ODRefreshControl;
+			sourceTree = "<group>";
+		};
+		FEFE877C177DBCA8009B3E45 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				FEFE8783177DBCD5009B3E45 /* SVProgressHUD.bundle */,
+				FEFE8784177DBCD5009B3E45 /* SVProgressHUD.h */,
+				FEFE8785177DBCD5009B3E45 /* SVProgressHUD.m */,
+			);
+			name = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -627,6 +677,8 @@
 				27DB88B21777F307007BC809 /* Default@2x.png in Resources */,
 				27DB88B41777F307007BC809 /* Default-568h@2x.png in Resources */,
 				27DB88B71777F307007BC809 /* MainStoryboard.storyboard in Resources */,
+				FEFE8786177DBCD5009B3E45 /* SVProgressHUD.bundle in Resources */,
+				FEFE878E177DBD03009B3E45 /* SIAlertView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,6 +767,10 @@
 				27DB898F17781C3A007BC809 /* OPBBSInterface.m in Sources */,
 				FE2FCC371778920800B9995C /* OPThreadViewController.m in Sources */,
 				FE078EE8177C96E2009083D7 /* OPThreadCell.m in Sources */,
+				FEFE8787177DBCD5009B3E45 /* SVProgressHUD.m in Sources */,
+				FEFE878A177DBCE5009B3E45 /* ODRefreshControl.m in Sources */,
+				FEFE878F177DBD03009B3E45 /* SIAlertView.m in Sources */,
+				FEFE8795177DC1FB009B3E45 /* OPThreadDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

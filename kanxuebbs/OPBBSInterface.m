@@ -11,7 +11,9 @@
 #import "JSONKit.h"
 
 @implementation OPBBSInterface
-
+//
+// code from https://github.com/so898/KanXuePasswordTest
+//
 + (NSString*)encodePassword:(NSString*)password
 {
     //这叫做丧心病狂
@@ -141,7 +143,7 @@
     [OPBBSInterface bbsGetData:url result:resultBlock];
 }
 
-+ (void)loadThread:(NSInteger)forumID result:(OPResultBlock)resultBlock
++ (void)loadThread:(NSInteger)forumID page:(NSInteger)page result:(OPResultBlock)resultBlock;
 {
     NSString *urlFormat = [OPGlobalURL URLForKey:kOPThreadList];
     NSString *url = [NSString stringWithFormat:urlFormat, forumID];

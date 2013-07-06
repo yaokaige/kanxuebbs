@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -299,7 +299,6 @@
                                                         <constraint firstAttribute="width" constant="290" id="vhu-t0-05U"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kas-id-aUC">
@@ -358,14 +357,25 @@
             </objects>
             <point key="canvasLocation" x="1328" y="-661"/>
         </scene>
-        <!--View Controller-->
+        <!--Thread Detail View Controller-->
         <scene sceneID="Gxm-bQ-hP4">
             <objects>
-                <viewController id="sQr-xP-2t1" sceneMemberID="viewController">
+                <viewController id="sQr-xP-2t1" customClass="OPThreadDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zPp-bV-4WY">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ed4-sh-1Po">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ed4-sh-1Po" firstAttribute="trailing" secondItem="zPp-bV-4WY" secondAttribute="trailing" type="default" id="6mM-bR-xpb"/>
+                            <constraint firstItem="ed4-sh-1Po" firstAttribute="leading" secondItem="zPp-bV-4WY" secondAttribute="leading" type="default" id="erd-WX-o7L"/>
+                            <constraint firstItem="ed4-sh-1Po" firstAttribute="top" secondItem="zPp-bV-4WY" secondAttribute="top" type="default" id="k4t-zR-17M"/>
+                            <constraint firstItem="ed4-sh-1Po" firstAttribute="bottom" secondItem="zPp-bV-4WY" secondAttribute="bottom" type="default" id="tHG-WX-sjK"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYX-gw-uY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -406,6 +416,9 @@
                 <relationship kind="outlet" name="threadTitleLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
             </relationships>
+        </class>
+        <class className="OPThreadDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OPThreadDetailViewController.h"/>
         </class>
         <class className="OPThreadViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/OPThreadViewController.h"/>

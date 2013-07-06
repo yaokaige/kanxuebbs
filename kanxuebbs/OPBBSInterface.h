@@ -20,6 +20,6 @@ typedef void(^OPResultBlock)(id data, NSError *err);
 + (void)login:(NSString *)name passwd:(NSString *)passwd result:(OPResultBlock)resultBlock;
 + (void)getSecurityToken:(OPResultBlock)resultBlock;
 + (void)loadBoard:(OPResultBlock)resultBlock;
-+ (void)loadThread:(NSInteger)forumID result:(OPResultBlock)resultBlock;
++ (void)loadThread:(NSInteger)forumID page:(NSInteger)page result:(OPResultBlock)resultBlock;
 
 @end
