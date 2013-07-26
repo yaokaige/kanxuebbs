@@ -79,6 +79,7 @@
 		27DB898F17781C3A007BC809 /* OPBBSInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DB898E17781C3A007BC809 /* OPBBSInterface.m */; };
 		FE078EE8177C96E2009083D7 /* OPThreadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE078EE7177C96E2009083D7 /* OPThreadCell.m */; };
 		FE2FCC371778920800B9995C /* OPThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2FCC361778920800B9995C /* OPThreadViewController.m */; };
+		FE5745F117A2CCA000F9CF50 /* UIColor+RGB.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5745F017A2CCA000F9CF50 /* UIColor+RGB.m */; };
 		FEFE8786177DBCD5009B3E45 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FEFE8783177DBCD5009B3E45 /* SVProgressHUD.bundle */; };
 		FEFE8787177DBCD5009B3E45 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFE8785177DBCD5009B3E45 /* SVProgressHUD.m */; };
 		FEFE878A177DBCE5009B3E45 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFE8789177DBCE5009B3E45 /* ODRefreshControl.m */; };
@@ -231,6 +232,8 @@
 		FE078EE7177C96E2009083D7 /* OPThreadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPThreadCell.m; sourceTree = "<group>"; };
 		FE2FCC351778920800B9995C /* OPThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPThreadViewController.h; sourceTree = "<group>"; };
 		FE2FCC361778920800B9995C /* OPThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPThreadViewController.m; sourceTree = "<group>"; };
+		FE5745EF17A2CCA000F9CF50 /* UIColor+RGB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGB.h"; sourceTree = "<group>"; };
+		FE5745F017A2CCA000F9CF50 /* UIColor+RGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGB.m"; sourceTree = "<group>"; };
 		FEFE8783177DBCD5009B3E45 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = libs/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle; sourceTree = SOURCE_ROOT; };
 		FEFE8784177DBCD5009B3E45 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = libs/SVProgressHUD/SVProgressHUD/SVProgressHUD.h; sourceTree = SOURCE_ROOT; };
 		FEFE8785177DBCD5009B3E45 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = libs/SVProgressHUD/SVProgressHUD/SVProgressHUD.m; sourceTree = SOURCE_ROOT; };
@@ -535,6 +538,8 @@
 				27DB8970177808E3007BC809 /* NSArray+Safe.m */,
 				27DB8971177808E3007BC809 /* NSDictionary+Safe.h */,
 				27DB8972177808E3007BC809 /* NSDictionary+Safe.m */,
+				FE5745EF17A2CCA000F9CF50 /* UIColor+RGB.h */,
+				FE5745F017A2CCA000F9CF50 /* UIColor+RGB.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -771,6 +776,7 @@
 				FEFE878A177DBCE5009B3E45 /* ODRefreshControl.m in Sources */,
 				FEFE878F177DBD03009B3E45 /* SIAlertView.m in Sources */,
 				FEFE8795177DC1FB009B3E45 /* OPThreadDetailViewController.m in Sources */,
+				FE5745F117A2CCA000F9CF50 /* UIColor+RGB.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

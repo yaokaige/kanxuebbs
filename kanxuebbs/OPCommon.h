@@ -22,5 +22,14 @@
 
 #define OPLogErr(xx, ...)      NSLog(@"[%s](line=%d)(%s): " xx, __FILE__, __LINE__, __PRETTY_FUNCTION__, ##__VA_ARGS__)
 
+#define OPGetViewFrameX(xx) xx.frame.origin.x
+#define OPGetViewFrameY(xx) xx.frame.origin.y
+#define OPGetViewFrameWidth(xx) xx.frame.size.width
+#define OPGetViewFrameHeight(xx) xx.frame.size.height
+
+#define OPGetControllerFrameX(xx) xx.view.frame.origin.x
+#define OPGetControllerFrameY(xx) xx.view.frame.origin.y
+#define OPGetControllerFrameWidth(xx) xx.view.frame.size.width
+#define OPGetControllerFrameHeight(xx) xx.view.frame.size.height
 
 #endif

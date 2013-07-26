@@ -16,4 +16,5 @@
     #import "OPCommon.h"
     #import "NSArray+Safe.h"
     #import "NSDictionary+Safe.h"
+    #import "UIColor+RGB.h"
 #endif
