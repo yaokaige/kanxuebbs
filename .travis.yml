@@ -1,5 +1,4 @@
 language: objective-c
 before_install:
     - brew update
-    - brew install xctool --HEAD
 script: xctool -project kanxuebbs.xcodeproj -scheme kanxuebbs -sdk iphonesimulator6.1 ONLY_ACTIVE_ARCH=NO -configuration Debug build
