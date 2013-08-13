@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		276E315517AFB5E9003BE434 /* thread.html in Resources */ = {isa = PBXBuildFile; fileRef = 276E315417AFB5E9003BE434 /* thread.html */; };
 		27DB889E1777F307007BC809 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DB889D1777F307007BC809 /* UIKit.framework */; };
 		27DB88A01777F307007BC809 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DB889F1777F307007BC809 /* Foundation.framework */; };
 		27DB88A81777F307007BC809 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27DB88A61777F307007BC809 /* InfoPlist.strings */; };
@@ -99,6 +100,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		276E315417AFB5E9003BE434 /* thread.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = thread.html; sourceTree = "<group>"; };
 		27DB889A1777F307007BC809 /* kanxuebbs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kanxuebbs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27DB889D1777F307007BC809 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27DB889F1777F307007BC809 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -331,6 +333,7 @@
 		27DB88A41777F307007BC809 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				276E315417AFB5E9003BE434 /* thread.html */,
 				27DB88A51777F307007BC809 /* kanxuebbs-Info.plist */,
 				27DB88A61777F307007BC809 /* InfoPlist.strings */,
 				27DB88A91777F307007BC809 /* main.m */,
@@ -684,6 +687,7 @@
 				27DB88B71777F307007BC809 /* MainStoryboard.storyboard in Resources */,
 				FEFE8786177DBCD5009B3E45 /* SVProgressHUD.bundle in Resources */,
 				FEFE878E177DBD03009B3E45 /* SIAlertView.bundle in Resources */,
+				276E315517AFB5E9003BE434 /* thread.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

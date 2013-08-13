@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Thread</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <meta name = "viewport" content = "width = device-width">
+        <meta name = "viewport" content = "initial-scale = 1.0">
+        <meta name = "viewport" content = "user-scalable = no">
+        <style type="text/css">
+            .post {text-align:left; padding: 5px; background-color: white}
+            .detail {text-align:left; padding: 5px; margin: 5px; background-color: gray}
+            .info{text-align:left; padding: 5px; background-color:#333333}
+            .avatar {border:dashed; border-width:1;color:#0066CC}
+            .title{text-align:left; color:black;}
+            .subtitle {margin: 5px; text-align:left; color:#333333}
+            .small{text-align:left; padding: 5px;}
+            .hr0{ height:1px;border:none;border-top:1px dashed #0066CC;}
+            .hr1{ height:1px;border:none;border-top:1px solid #555555;}
+            .hr2{ height:3px;border:none;border-top:3px double red;}
+            .hr3{ height:5px;border:none;border-top:5px ridge green;}
+            .hr4{ height:10px;border:none;border-top:10px groove skyblue;}
+            img{
+                width:100%;
+                max-width:320px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var post = {
+    "time": 1359885305,
+    "pagenav": 0,
+    "postbits": [
+        {
+            "postid": "1139493",
+            "thumbnail": 0,
+            "username": "kanxue",
+            "userid": 93,
+            "avatar": "1",
+            "avatardateline": "1328408022",
+            "posttime": "12:13:14",
+            "postdate": "2013-01-30",
+            "title": "【测试】附件图片测试2",
+            "message": '再次测试~~<br/><img src="http://bbs.pediy.com/attachment.php?attachmentid=76125&amp;thumb=1&amp;d=1359535385"></img><br/>大家好',
+            "thumbnailattachments": [
+                {
+                    "attachmentid": "76126",
+                    "filename": "meigus15.jpg",
+                    "filesize": "7626"
+                },
+                {
+                    "attachmentid": "76128",
+                    "filename": "W020121221530237405253.jpg",
+                    "filesize": "5731"
+                }
+            ],
+            "otherattachments": [
+                ,
+                {
+                    "attachmentid": "76239",
+                    "filename": "test.rar",
+                    "filesize": "53298"
+                }
+            ]
+        }
+    ]
+}
+        </script>
+        <div class="container">
+            <div class="post">
+                <div clas="info">
+                    <div class="title">【分享】看雪论坛移动客户端接口</div>
+                    <div class="small">
+                        <span class="subtitle">UserName</span>
+                        <span class="subtitle">2013-08-05, 15:20:58</span>
+                    </div>
+                </div>
+                <div class="detail">
+                    <span>abcdefg</span>
+                </div>
+            </div>
+            <hr class="hr0">
+        </div>
+        <script>
+            var postCon = document.getElementsByClassName("container")[0]
+            var html = '';
+            for (i in post.postbits) {
+                one = post.postbits[i]
+                title = one.title
+                username = one.username
+                posttime = one.postdate + one.posttime
+                message = one.message
+                html = html + '<div clas="info"><div class="title">' + title + '</div><div class="small"><span class="subtitle">' + username + '</span><span class="subtitle">' + posttime + '</span> </div> </div> <div class="detail"> <span>' +message+'</span> </div> </div> <hr class="hr0">'
+            }
+            postCon.innerHTML = postCon.innerHTML + html
+        </script>
+    </body>
+</html>

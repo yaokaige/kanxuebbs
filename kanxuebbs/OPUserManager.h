@@ -41,6 +41,8 @@
  */
 - (void)login:(NSString *)name passwd:(NSString *)passwd;
 
+- (void)getSecurityToken;
+
 + (id)sharedInstance;
 
 @end

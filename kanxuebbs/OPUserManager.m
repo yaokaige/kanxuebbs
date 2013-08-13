@@ -107,6 +107,11 @@
     self.username = [dict objectForKeyNotNull:@"securitytoken"];
 }
 
+- (void)getSecurityToken
+{
+    // TODO: 登录接口会返回securitytoken，每次重新启动app还需要通过getsecuritytoken.php接口重新获得securitytoken
+}
+
 + (id)sharedInstance
 {
     static OPUserManager *sharedInstance = nil;

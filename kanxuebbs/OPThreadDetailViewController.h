@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OPThreadDetailViewController : UIViewController
+@interface OPThreadDetailViewController : UIViewController <UIWebViewDelegate>
 @property (nonatomic, strong) NSString *threadID;
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
 @end
