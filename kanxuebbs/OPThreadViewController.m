@@ -119,6 +119,8 @@
     id data = [_threadList safeObjectAtIndex:indexPath.row];
     if (nil != data) {
         // TODO: pass data
+        OPThreadDetailViewController *c = segue.destinationViewController;
+        c.threadID = data[@"threadid"];
     }
 }
 
