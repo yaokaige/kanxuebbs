@@ -85,6 +85,19 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        resultBlock(responseObject, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        resultBlock(nil, error);
+    }];
+
+    [operation start];
+}
+
++ (void)bbsGetJSON:(NSString *)url result:(OPResultBlock)resultBlock
+{
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         id json = [responseObject objectFromJSONData];
         if (json == nil) {
             NSString *msg = @"Cant parse response data to json.";
@@ -97,7 +110,7 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         resultBlock(nil, error);
     }];
-
+    
     [operation start];
 }
 
@@ -134,20 +147,44 @@
 + (void)getSecurityToken:(OPResultBlock)resultBlock
 {
     NSString *url = [OPGlobalURL URLForKey:kOPSecurityToken];
-    [OPBBSInterface bbsGetData:url result:resultBlock];
+    [OPBBSInterface bbsGetJSON:url result:resultBlock];
 }
 
 + (void)loadBoard:(OPResultBlock)resultBlock
 {
     NSString *url = [OPGlobalURL URLForKey:kOPBoardList];
-    [OPBBSInterface bbsGetData:url result:resultBlock];
+    [OPBBSInterface bbsGetJSON:url result:resultBlock];
 }
 
 + (void)loadThread:(NSInteger)forumID page:(NSInteger)page result:(OPResultBlock)resultBlock;
 {
     NSString *urlFormat = [OPGlobalURL URLForKey:kOPThreadList];
     NSString *url = [NSString stringWithFormat:urlFormat, forumID];
+    [OPBBSInterface bbsGetJSON:url result:resultBlock];
+}
+
++ (void)loadPost:(NSString *)threadid result:(OPResultBlock)resultBlock
+{
+    NSString *urlFormant = [OPGlobalURL URLForKey:kOPThreadPost];
+    NSString *url = [NSString stringWithFormat:urlFormant, threadid];
     [OPBBSInterface bbsGetData:url result:resultBlock];
+}
+
++ (void)loadPostDetail:(NSString *)postid result:(OPResultBlock)resultBlock;
+{
+    NSString *urlFormant = [OPGlobalURL URLForKey:kOPPostDetail];
+    NSString *url = [NSString stringWithFormat:urlFormant, postid];
+    [OPBBSInterface bbsGetData:url result:resultBlock];
+}
+
++ (void)newPost:(NSString *)subject message:(NSString *)message forumID:(NSString *)fid
+{
+    
+}
+
++ (void)replyPost:(NSString *)message postID:(NSString *)pid
+{
+    
 }
 
 @end
