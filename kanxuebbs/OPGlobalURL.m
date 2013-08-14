@@ -26,7 +26,7 @@
                   kOPUserInfo      : @"http://bbs.pediy.com/member.php?u=%@&styleid=12",
                   kOPBoardList     : @"http://bbs.pediy.com/index.php?styleid=12",
                   kOPThreadList    : @"http://bbs.pediy.com/forumdisplay.php?f=%d?styleid=12&page=%d&order=desc",
-                  kOPThreadPost    : @"http://bbs.pediy.com/showthread.php?t=%d?styleid=12",
+                  kOPThreadPost    : @"http://bbs.pediy.com/showthread.php?t=%@?styleid=12",
                   kOPNewThread     : @"http://bbs.peidy.com/newthread.php?styleid=12",
                   kOPNewReply      : @"http://bbs.pediy.com/newreply.php?styleid=12",
                   kOPBoardStatus   : @"http://bbs.pediy.com/forumdisplay.php?f=%d&getnewpost=%d&styleid=12",
