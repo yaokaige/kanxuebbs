@@ -18,6 +18,8 @@
             .hr2{ height:3px;border:none;border-top:3px double red;}
             .hr3{ height:5px;border:none;border-top:5px ridge green;}
             .hr4{ height:10px;border:none;border-top:10px groove skyblue;}
+            .actionleft{float:left}
+            .actionright{float:right}
             img{
                 width:100%;
                 max-width:320px;
@@ -64,8 +66,27 @@
         }
     ]
 }
+        function ShowPost(p) {
+            var postCon = document.getElementsByClassName("container")[0]
+            var html = '';
+            for (i in p.postbits) {
+                one = p.postbits[i]
+                username = one.username
+                posttime = one.postdate + one.posttime
+                message = one.message
+                if (i == 0) {
+                title = one.title
+                html = html + '<div clas="info"><div class="title">' + title + '</div><div class="small"><span class="subtitle">' + username + '</span><span class="subtitle">' + posttime + '</span> </div> </div> <div class="detail"> <span>' +message+'</span> </div> </div>' + '<div class="action"><div class="actionleft"><a href="/show/'+one.postid +'">完整内容</a> </div> <div class="actionright"><a href="/reply/'+ one.postid + '">引用帖子</a></div> </div> <hr class="hr0">'
+                }
+                else {
+                html = html + '<div clas="info"><div class="small"><span class="subtitle">' + username + '</span><span class="subtitle">' + posttime + '</span> </div> </div> <div class="detail"> <span>' +message+'</span> </div> </div>' + '<div class="action"><div class="actionleft"><a href="/show/'+one.postid + '">完整内容</a> </div> <div class="actionright"><a href="/reply/'+ one.postid +'">引用帖子</a></div> </div> <hr class="hr0">'
+                }
+            }
+            postCon.innerHTML = postCon.innerHTML + html
+        }
         </script>
         <div class="container">
+            <!--
             <div class="post">
                 <div clas="info">
                     <div class="title">【分享】看雪论坛移动客户端接口</div>
@@ -77,21 +98,40 @@
                 <div class="detail">
                     <span>abcdefg</span>
                 </div>
+                <div class="action">
+                    <div class="actionleft">
+                    <a href="/show/12345">完整内容</a>
+                        </div>
+                    <div class="actionright"><a href="/reply/12345">引用帖子</a></div>
+                </div>
             </div>
             <hr class="hr0">
+            --!>
         </div>
+        <!--
         <script>
-            var postCon = document.getElementsByClassName("container")[0]
-            var html = '';
-            for (i in post.postbits) {
-                one = post.postbits[i]
-                title = one.title
-                username = one.username
-                posttime = one.postdate + one.posttime
-                message = one.message
-                html = html + '<div clas="info"><div class="title">' + title + '</div><div class="small"><span class="subtitle">' + username + '</span><span class="subtitle">' + posttime + '</span> </div> </div> <div class="detail"> <span>' +message+'</span> </div> </div> <hr class="hr0">'
-            }
-            postCon.innerHTML = postCon.innerHTML + html
+            var p = {"time":1376464302,"pagenav":0,"postbits":[{"postid":"617354","thumbnail":1,"username":"赵阳光","userid":0,"avatar":"0","avatardateline":"0","posttime":"11:40:29","postdate":"2009-05-05","title":"已解答: 【原创】一段有意思的C语代码分析","message":'某博客里看到这么一段代码，用多个编译器编译出来都无法确定结果，因为结果不一样，代码如下：&nbsp;<br /> 复制内容到剪贴板&nbsp;<br /> 代码:<br /> void&nbsp;main()<br /> {<br /> int&nbsp;i&nbsp;=&nbsp;1;<br /> printf(&quot;%d,%d,%d&quot;,i++,++i,i);<br /> printf(&quot;&#92;n&#92;n&quot;);<br /> }<br /> 很普通的代码，i++和++i是一样的，都是自动加1，我分别用了VC、TC和Linux下的GCC编译，结果如下。<br /> <br /> VC&nbsp;&nbsp;debug</Array>......' 
+
+ }
+,{"postid":"617625","thumbnail":0,"username":"笨笨雄","userid":55894,"avatar":"0","avatardateline":"0","posttime":"17:55:19","postdate":"2009-05-05","message":'邀请码已发送'
+
+
+
+ }
+]}
+            ShowPost(p)
+            //var postCon = document.getElementsByClassName("container")[0]
+            //var html = '';
+            //for (i in post.postbits) {
+            //    one = post.postbits[i]
+            //    title = one.title
+            //    username = one.username
+            //    posttime = one.postdate + one.posttime
+            //    message = one.message
+            //    html = html + '<div clas="info"><div class="title">' + title + '</div><div class="small"><span class="subtitle">' + username + '</span><span class="subtitle">' + posttime + '</span> </div> </div> <div class="detail"> <span>' +message+'</span> </div> </div> <hr class="hr0">'
+            //}
+            //postCon.innerHTML = postCon.innerHTML + html
         </script>
+        --!>
     </body>
 </html>
