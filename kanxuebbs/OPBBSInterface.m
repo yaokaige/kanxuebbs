@@ -100,6 +100,7 @@
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         id json = [responseObject objectFromJSONData];
         if (json == nil) {
+            OPLog(@"%@", [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
             NSString *msg = @"Cant parse response data to json.";
             NSError *e = [NSError errorWithDomain:OPErrorDomain code:-1 userInfo:@{NSLocalizedDescriptionKey: msg, NSLocalizedFailureReasonErrorKey: msg}];
             resultBlock(nil, e);

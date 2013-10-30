@@ -9,6 +9,7 @@
 #import "OPThreadDetailViewController.h"
 #import "OPBBSInterface.h"
 #import "OPPostDetailViewController.h"
+#import <Foundation/NSJSONSerialization.h>
 
 @interface OPThreadDetailViewController ()
 
@@ -63,6 +64,14 @@
 - (void)dataReady:(id)data
 {
     NSString *postdata = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSError *err = nil;
+    id jdata = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&err];
+    if (err != nil) {
+        OPLog(@"%@", jdata);
+    }
+    else {
+        OPLog(@"%@", err.localizedDescription);
+    }
     NSString *cmd = [NSString stringWithFormat:@"var pdata = %@\nShowPost(pdata)", [postdata stringByReplacingOccurrencesOfString:@"\r\n" withString:@""]];
     OPLog(@"%@", [_webView stringByEvaluatingJavaScriptFromString:cmd]);
 }
