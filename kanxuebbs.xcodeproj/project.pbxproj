@@ -913,6 +913,7 @@
 				GCC_PREFIX_HEADER = "kanxuebbs/kanxuebbs-Prefix.pch";
 				INFOPLIST_FILE = "kanxuebbs/kanxuebbs-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos6.1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -924,6 +925,7 @@
 				GCC_PREFIX_HEADER = "kanxuebbs/kanxuebbs-Prefix.pch";
 				INFOPLIST_FILE = "kanxuebbs/kanxuebbs-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos6.1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
