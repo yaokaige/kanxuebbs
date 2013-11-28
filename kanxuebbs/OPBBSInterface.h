@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "OPGlobalURL.h"
-#import "AFNetworking.h"
+#import <AFNetworking.h>
 
 typedef void(^OPResultBlock)(id data, NSError *err);
 

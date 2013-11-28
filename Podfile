@@ -1,7 +1,7 @@
 platform :ios, '7.0'
 
 pod 'JSONKit'
-pod 'AFNetworking'
+pod 'AFNetworking', '1.3.3'
 pod 'Reachability'
 pod 'SDWebImage'
 pod 'InAppSettingsKit'
